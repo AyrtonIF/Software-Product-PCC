@@ -1,0 +1,44 @@
+{% if current_user.is_authenticated %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styleClientes.css" media="screen">
+    <script src="static/javascript.js"></script>
+    <title>Formulário | GN</title>
+</head>
+
+<body>
+    <div class="box">
+        <form action="" method="POST">
+            <fieldset>
+                <legend><b>Deletar Registro de Cliente</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="id_cliente" id="id_cliente" class="inputUser" required>
+                    <label for="id_cliente" class="labelInput">Id do Cliente</label>
+                </div>
+                <br><br>
+                <button type="submit" name="submit" id="submit">Deletar Registro</button>
+                <br><br>
+                <a href="{{ url_for('ClientesCRUD') }}">Voltar</a>
+                <br>
+                <a href="{{ url_for('Logout') }}">Sair</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
+
+{% else %}
+
+    <script>
+        window.open("http://127.0.0.1:5000/Login", "_self")
+    </script>
+
+{% endif %}

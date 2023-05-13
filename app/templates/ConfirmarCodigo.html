@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styleClientes.css" media="screen">
+    <title>Formulário | GN</title>
+</head>
+
+<body>
+    <div class="box">
+        <form id="codigo-form" action="" method="POST">
+            <fieldset>
+                <legend><b>Recuperação de Senha</b></legend>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="codigo" id="codigo" class="inputUser" required>
+                    <label for="codigo" class="labelInput">Código de confirmação</label>
+                </div>
+                <br>
+                <button type="submit" name="submit" id="codigo-submit">Confirmar Código</button>
+                <br><br>
+                <a href="{{ url_for('RecuperarSenha') }}">Voltar</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

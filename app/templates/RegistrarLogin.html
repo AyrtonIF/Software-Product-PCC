@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styleClientes.css" media="screen">
+    <script src="static/javascript.js"></script>
+    <title>Formulário | GN</title>
+</head>
+
+<body>
+    <div class="box">
+        <form action="" method="POST">
+            <fieldset>
+                <legend><b>Formulário de Registro</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="name" id="name" class="inputUser" required>
+                    <label for="name" class="labelInput">Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for="password" class="labelInput">Senha</label>
+                </div>
+                <br><br>
+                <button type="submit" name="submit" id="submit">Registrar</button>
+                <br><br>
+                <a href="{{ url_for('Login') }}">Voltar</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

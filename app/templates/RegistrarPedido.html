@@ -1,0 +1,54 @@
+{% if current_user.is_authenticated %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styleClientes.css" media="screen">
+    <script src="static/javascript.js"></script>
+    <title>Formulário | GN</title>
+</head>
+
+<body>
+    <div class="box">
+        <form action="" method="POST">
+            <fieldset>
+                <legend><b>Formulário de Pedido</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="email" name="email_cliente" id="email_cliente" class="inputUser" required>
+                    <label for="email_cliente" class="labelInput">E-mail do cliente</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="codigo_produto" id="codigo_produto" class="inputUser" required>
+                    <label for="codigo_produto" class="labelInput">Código do Produto</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="quantidade" id="quantidade" class="inputUser" required>
+                    <label for="quantidade" class="labelInput">Quantidade</label>
+                </div>
+                <br><br>
+                <button type="submit" name="submit" id="submit">Enviar</button>
+                <br><br>
+                <a href="{{ url_for('PedidosCRUD') }}">Voltar</a>
+                <br>
+                <a href="{{ url_for('Logout') }}">Sair</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
+
+{% else %}
+
+    <script>
+        window.open("http://127.0.0.1:5000/Login", "_self")
+    </script>
+
+{% endif %}

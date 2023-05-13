@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styleClientes.css" media="screen">
+    <title>Formulário | GN</title>
+</head>
+
+<body>
+    <div class="box">
+        <form id="nova-senha-form" action="" method="POST">
+            <fieldset>
+                <legend><b>Recuperação de Senha</b></legend>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for="password" class="labelInput">Nova Senha</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="confirm-password" id="confirm-password" class="inputUser" required>
+                    <label for="confirm-password" class="labelInput">Confirmar Nova Senha</label>
+                </div>
+                <br>
+                <button type="submit" name="submit" id="nova-senha-submit">Atualizar Senha</button>
+                <br><br>
+                <a href="{{ url_for('Login') }}">Voltar</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
